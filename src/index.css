@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.black{
+    color: rgb(46, 46, 46);
+}
+
+.gray{
+    color: rgb(121, 121, 121);
+}
+
+.hover-black:hover{
+    color: rgb(36, 36, 36);
+}
+
+.hover-gray:hover{
+    color: rgb(87, 87, 87);
+}
+
+.font-nazanin{ font-family: nazanin; }
+.font-yekan{ font-family: iran-yekan; }
+.font-sans{ font-family: iranian-sans; }
+.font-serif{ font-family: sans-serif; }
+
+
+@font-face {
+    font-family: iran-yekan;
+    src: url(./data/iranyekanwebbold.ttf);
+}
+
+@font-face {
+    font-family: iranian-sans;
+    src: url(./data/IranianSans.ttf);
+}
+
+@font-face {
+    font-family: nazanin;
+    src: url(./data/nazanin.ttf);
+}

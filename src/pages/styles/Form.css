@@ -1,0 +1,28 @@
+.form-container{
+    min-width: 280px;
+    max-width: 400px;
+    min-height: 300px;
+    margin-top: 100px;
+    border-radius: 30px;
+    border: 2px solid rgb(235, 235, 235);
+}
+
+.form-container form input{
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid rgb(235, 235, 235);
+}
+
+.form-container form button{
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(230, 33, 33, 1);
+}
+
+.form-container form button:hover{
+    background-color: rgba(230, 33, 33, 0.8);
+}
+
+.form-container form a span{
+    font-size: 0.8rem;
+}

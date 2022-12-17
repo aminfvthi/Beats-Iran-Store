@@ -1,0 +1,28 @@
+.sidebar{
+    position: fixed;
+    z-index: 10000;
+    width: 300px;
+    height: 100vh;
+    box-shadow: 30px 0px 100px rgb(122, 122, 122, 0.8);
+}
+
+.sidebar-brand span{
+    font-size: 1.2rem;
+}
+
+.sidebar-item{
+    border-radius: 10px;
+}
+
+.sidebar-item:hover{
+    background-color: rgb(239, 239, 239);
+}
+
+.sidebar-item i{
+    font-size: 1.2rem;
+}
+
+.sidebar-item span{
+    padding-right: 10px;
+    font-size: 1rem;
+}

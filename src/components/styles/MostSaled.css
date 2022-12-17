@@ -1,0 +1,40 @@
+.most-saled-card{
+    box-shadow: 0px 0px 50px rgba(122, 122, 122, 0.2);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.most-saled-card:hover{
+    box-shadow: 0px 0px 60px rgba(122, 122, 122, 0.5);
+    transform: translateY(-5px);
+}
+
+.product-name{
+ font-size: 1.4rem;
+ font-weight: 700;
+}
+
+.price{
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.product-color{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+    .product-name{
+        font-size: 1.8rem;
+        font-weight: 700;
+       }
+       
+       .price{
+           font-size: 1.2rem;
+           font-weight: 800;
+       }
+}

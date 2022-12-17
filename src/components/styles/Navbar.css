@@ -1,0 +1,77 @@
+.sticky{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav{
+    background-color: rgb(247, 247, 247);
+    border-bottom: 1px solid rgba(232, 232, 232, 0.9);
+    height: 70px;
+}
+
+.navbar-btn i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+.brand span{
+    margin: auto;
+    font-size: 1rem;
+    color: rgb(36, 36, 36);
+}
+
+.navbar-logo{
+    width: 25px;
+}
+
+.search{
+    font-size: 0.8rem;
+    margin-right: auto;
+    border: none;
+    outline: none;
+    max-width: 150px;
+    background-color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: all 700ms;
+}
+
+.search:hover{
+    max-width: 250px;
+}
+
+.search:focus{
+    max-width: 250px;
+}
+
+.search-btn{
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: rgb(235, 235, 235);
+}
+
+.search-btn i{
+    color: rgb(65, 65, 65);
+}
+
+.products-nav{
+    background-color: rgb(247, 247, 247);
+    border-bottom: 1px solid rgba(232, 232, 232, 0.9);
+    height: 50px;
+}
+
+.products-nav-item{
+    height: 100%;
+    font-size: 0.9rem;
+    padding: 0px 20px;
+    transition: 200ms;
+    border-bottom: 2px solid rgb(247, 247, 247);
+}
+
+
+.products-nav-item:hover{
+    border-bottom: 2px solid red;
+}
