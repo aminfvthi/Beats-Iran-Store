@@ -1,3 +1,4 @@
+import * as yup from "yup";
 import solo3 from "../assets/images/solo3.jpg";
 import studio3 from "../assets/images/studio3.jpg";
 import soloPro from "../assets/images/solo-pro.jpg";
@@ -15,6 +16,23 @@ import pillPlus from "../assets/images/pill-plus.jpg";
 import solo3Case from "../assets/images/solo3-case.jpg";
 import soloProCase from "../assets/images/solo-pro-case.jpeg";
 import solo3Earpads from "../assets/images/solo3-earpads.jpeg";
+
+export const validationSchema = yup.object().shape({
+  firstName: yup.string()
+  .required("* لطفا نام خود را وارد کنید"),
+  lastName: yup.string()
+  .required("* لطفا نام خانوادگی خود را وارد کنید"),
+  email: yup
+    .string()
+    .email("* لطفا ایمیل خود را به صورت صحیح وارد کنید")
+    .required("* لطفا ایمیل خود را وارد کنید"),
+  password: yup
+    .string()
+    .min(4, "* رمز وارد شده باید حداقل چهار حرف باشد")
+    .max(15, "* رمز وارد شده می تواند حداکثر پانزده حرف باشد")
+    .required(),
+  confirmPassword: yup.string().oneOf([yup.ref("password"), null]),
+});
 
 export const headphones = [
   {
