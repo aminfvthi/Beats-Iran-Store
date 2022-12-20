@@ -34,15 +34,15 @@ a{
 
 @font-face {
     font-family: iran-yekan;
-    src: url(./data/iranyekanwebbold.ttf);
+    src: url(./assets/fonts/iranyekanwebbold.ttf);
 }
 
 @font-face {
     font-family: iranian-sans;
-    src: url(./data/IranianSans.ttf);
+    src: url(./assets/fonts/IranianSans.ttf);
 }
 
 @font-face {
     font-family: nazanin;
-    src: url(./data/nazanin.ttf);
+    src: url(./assets/fonts/nazanin.ttf);
 }
