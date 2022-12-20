@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { validationSchema } from "../data/dummy"
+import { validationSchema } from "../data/validationSchema"
 import "./styles/Form.css";
 
 const SignIn = () => {
