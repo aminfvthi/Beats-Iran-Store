@@ -27,9 +27,7 @@ const SignIn = () => {
             className="w-100 my-2 p-1"
             name="firstName"
             type="text"
-            {...register("firstName", {
-              required: "Required",
-            })}
+            {...register("firstName")}
           />
           <p className="danger text-danger"> {errors.firstName?.message} </p>
           <span className="black font-yekan d-block">نام خانوادگی</span>
@@ -37,9 +35,7 @@ const SignIn = () => {
             className="w-100 my-2 p-1"
             name="lastName"
             type="text"
-            {...register("lastName", {
-              required: "Required",
-            })}
+            {...register("lastName")}
           />
           <p className="danger text-danger"> {errors.lastName?.message} </p>
           <span className="black font-yekan d-block">ایمیل</span>
@@ -47,9 +43,7 @@ const SignIn = () => {
             className="w-100 my-2 p-1"
             name="email"
             type="email"
-            {...register("email", {
-              required: "Required",
-            })}
+            {...register("email")}
           />
           <p className="danger text-danger"> {errors.email?.message} </p>
           <span className="black font-yekan d-block">رمز ورود</span>
@@ -57,9 +51,7 @@ const SignIn = () => {
             className="w-100 my-2 p-1"
             name="password"
             type="password"
-            {...register("password", {
-              required: "Required",
-            })}
+            {...register("password")}
           />
           <p className="danger text-danger"> {errors.password?.message} </p>
           <span className="black font-yekan d-block">تکرار رمز ورود</span>
@@ -67,11 +59,9 @@ const SignIn = () => {
             className="w-100 my-2 p-1"
             name="confirmPassword"
             type="password"
-            {...register("confirmPassword", {
-              required: "Required",
-            })}
+            {...register("confirmPassword")}
           />
-          <p className="danger text-danger"> {errors.confirmPassword && "رمز وارد شده باید مشابه باشد"} </p>
+          <p className="danger text-danger"> {errors.confirmPassword && "* رمز وارد شده باید مشابه باشد"} </p>
           <button
             type="submit"
             className="w-100 py-2 px-3 my-3 font-yekan text-white"
