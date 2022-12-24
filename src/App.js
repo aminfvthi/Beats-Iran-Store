@@ -5,7 +5,7 @@ import {
   Account,
   Home,
   Login,
-  SignIn,
+  SignUp,
   Products,
   Headphones,
   Earphones,
@@ -26,7 +26,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="account" element={<Account />} />
             <Route path="login" element={<Login />} />
-            <Route path="sign-in" element={<SignIn />} />
+            <Route path="sign-up" element={<SignUp />} />
             <Route path="products" element={<Products />}>
               <Route path="headphones" element={<Headphones />} />
               <Route path="earphones" element={<Earphones />} />

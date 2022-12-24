@@ -14,7 +14,7 @@ const Account = () => {
           <button className="w-100 py-2 px-3 my-3 font-yekan text-white">
             ورود
           </button>
-          <Link to="/sign-in">
+          <Link to="/sign-up">
             <span className="font-yekan">
               حساب کاربری ندارید؟ (ایجاد حساب جدید)
             </span>

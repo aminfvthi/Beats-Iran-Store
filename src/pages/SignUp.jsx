@@ -5,7 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { validationSchema } from "../data/validationSchema"
 import "./styles/Form.css";
 
-const SignIn = () => {
+const SignUp = () => {
   const {
     register,
     handleSubmit,
@@ -77,4 +77,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignUp;
