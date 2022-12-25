@@ -9,6 +9,7 @@ import "./styles/Form.css";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loginError, setLoginError] = useState("");
 
   const {
     register,
@@ -27,13 +28,20 @@ const Login = () => {
     axios
       .post("https://reqres.in/api/login", user)
       .then((response) => {
-        console.log(response)
+        console.log(response);
       })
+      .catch((error) => {
+        setLoginError("ایمیل یا رمز وارد شده نادرست می باشد");
+        console.log(error);
+      });
   };
 
   return (
     <div className="container-fluid" style={{ height: "100vh" }}>
       <div className="form-container bg-light mx-auto py-5 px-4">
+        {loginError.length !== 0 && (
+          <div className="alert alert-danger">{loginError}</div>
+        )}
         <form onSubmit={handleSubmit(submitForm)}>
           <span className="black font-yekan d-block">ایمیل</span>
           <input
