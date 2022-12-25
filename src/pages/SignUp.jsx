@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { validationSchema } from "../data/validationSchema"
+import { validationSchema } from "../data/validationSchema";
 import "./styles/Form.css";
 
 const SignUp = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const {
     register,
     handleSubmit,
@@ -14,8 +20,19 @@ const SignUp = () => {
     resolver: yupResolver(validationSchema),
   });
 
-  const submitForm = (data) => {
-    console.log(data);
+  const user = {
+    first_name: firstName,
+    last_name: lastName,
+    email: email,
+    password: password,
+  };
+
+  const submitForm = () => {
+    axios
+      .post("https://reqres.in/api/users", user)
+      .then((response) => {
+        console.log(response.data);
+      });
   };
 
   return (
@@ -27,7 +44,9 @@ const SignUp = () => {
             className="w-100 my-2 p-1"
             name="firstName"
             type="text"
-            {...register("firstName")}
+            {...register("firstName", {
+              onChange: (e) => setFirstName(e.target.value),
+            })}
           />
           <p className="danger text-danger"> {errors.firstName?.message} </p>
           <span className="black font-yekan d-block">نام خانوادگی</span>
@@ -35,7 +54,9 @@ const SignUp = () => {
             className="w-100 my-2 p-1"
             name="lastName"
             type="text"
-            {...register("lastName")}
+            {...register("lastName", {
+              onChange: (e) => setLastName(e.target.value),
+            })}
           />
           <p className="danger text-danger"> {errors.lastName?.message} </p>
           <span className="black font-yekan d-block">ایمیل</span>
@@ -43,7 +64,7 @@ const SignUp = () => {
             className="w-100 my-2 p-1"
             name="email"
             type="email"
-            {...register("email")}
+            {...register("email", {onChange: (e) => setEmail(e.target.value)})}
           />
           <p className="danger text-danger"> {errors.email?.message} </p>
           <span className="black font-yekan d-block">رمز ورود</span>
@@ -51,7 +72,7 @@ const SignUp = () => {
             className="w-100 my-2 p-1"
             name="password"
             type="password"
-            {...register("password")}
+            {...register("password", {onChange: (e) => setPassword(e.target.value)})}
           />
           <p className="danger text-danger"> {errors.password?.message} </p>
           <span className="black font-yekan d-block">تکرار رمز ورود</span>
@@ -61,7 +82,9 @@ const SignUp = () => {
             type="password"
             {...register("confirmPassword")}
           />
-          <p className="danger text-danger"> {errors.confirmPassword && "* رمز وارد شده باید مشابه باشد"} </p>
+          <p className="danger text-danger">
+            {errors.confirmPassword && "* رمز وارد شده باید مشابه باشد"}
+          </p>
           <button
             type="submit"
             className="w-100 py-2 px-3 my-3 font-yekan text-white"
