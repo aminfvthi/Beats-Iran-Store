@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { validationSchema } from "../data/validationSchema";
+import { loginValidationSchema } from "../data/loginValidationSchema";
 import "./styles/Form.css";
 
 const Login = () => {
@@ -15,7 +15,7 @@ const Login = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(validationSchema),
+    resolver: yupResolver(loginValidationSchema),
   });
 
   const user = {
@@ -25,7 +25,7 @@ const Login = () => {
 
   const submitForm = () => {
     axios
-      .get("https://reqres.in/api/users?page=2")
+      .post("https://reqres.in/api/login", user)
       .then((response) => {
         console.log(response)
       })

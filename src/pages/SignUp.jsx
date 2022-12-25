@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { validationSchema } from "../data/validationSchema";
+import { signUpValidationSchema } from "../data/signUpValidationSchema";
 import "./styles/Form.css";
 
 const SignUp = () => {
@@ -17,7 +17,7 @@ const SignUp = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(validationSchema),
+    resolver: yupResolver(signUpValidationSchema),
   });
 
   const user = {
