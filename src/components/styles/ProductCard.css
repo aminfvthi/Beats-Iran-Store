@@ -1,5 +1,6 @@
 .product-card{
     transition: all 300ms;
+    height: 100%;
 }
 
 .product-card:hover{

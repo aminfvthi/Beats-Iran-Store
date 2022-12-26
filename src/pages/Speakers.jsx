@@ -7,7 +7,7 @@ const Speakers = () => {
     <div className="container">
       <div className="row px-2 px-sm-0 mt-3 mt-md-5">
         {speakers.map((item) => (
-          <div className="col-6 col-lg-4 col-xxl-3">
+          <div className="col-6 col-lg-4 col-xxl-3 mb-4">
             <ProductCard
               title={item.title}
               price={item.price}

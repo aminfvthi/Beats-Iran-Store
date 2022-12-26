@@ -5,7 +5,7 @@ import "./styles/ProductCard.css";
 const ProductCard = ({ title, price, image, score, route }) => {
   return (
     <Link to={route}>
-      <div className="product-card border p-3 p-sm-4 mb-4 position-relative">
+      <div className="product-card border p-3 p-sm-4 position-relative">
         <div className="d-flex justify-content-center align-items-center ">
           <div className="position-absolute score-div">
             <span className="gray mx-1">{score}</span>
