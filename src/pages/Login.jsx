@@ -10,6 +10,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState("");
+  const [isFetching, setIsFetching] = useState(false);
 
   const {
     register,
@@ -25,13 +26,16 @@ const Login = () => {
   };
 
   const submitForm = () => {
+    setIsFetching(true);
     axios
       .post("https://reqres.in/api/login", user)
       .then((response) => {
+        setIsFetching(false);
         console.log(response);
       })
       .catch((error) => {
         setLoginError("ایمیل یا رمز وارد شده نادرست می باشد");
+        setIsFetching(false);
         console.log(error);
       });
   };
@@ -64,6 +68,7 @@ const Login = () => {
           />
           <p className="danger text-danger"> {errors.password?.message} </p>
           <button
+            disabled={isFetching}
             type="submit"
             className="w-100 py-2 px-3 my-3 font-yekan text-white"
           >

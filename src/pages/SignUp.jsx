@@ -12,6 +12,7 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [signUpError, setSignUpError] = useState("");
+  const [isFetching, setIsFetching] = useState(false);
 
   const {
     register,
@@ -29,13 +30,16 @@ const SignUp = () => {
   };
 
   const submitForm = () => {
+    setIsFetching(true);
     axios
       .post("https://reqres.in/api/users", user)
       .then((response) => {
+        setIsFetching(false);
         console.log(response.data);
       })
       .catch((error) => {
         setSignUpError("ارتباط با سرور برقرار نشد. لطفا مجددا تلاش کنید");
+        setIsFetching(false);
         console.log(error);
       });
   };
@@ -98,6 +102,7 @@ const SignUp = () => {
             {errors.confirmPassword && "* رمز وارد شده باید مشابه باشد"}
           </p>
           <button
+            disabled={isFetching}
             type="submit"
             className="w-100 py-2 px-3 my-3 font-yekan text-white"
           >
