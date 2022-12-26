@@ -37,7 +37,7 @@ const Login = () => {
   };
 
   return (
-    <div className="container-fluid" style={{ height: "100vh" }}>
+    <div className="container-fluid" style={{ height: "150vh" }}>
       <div className="form-container bg-light mx-auto py-5 px-4">
         {loginError.length !== 0 && (
           <div className="alert alert-danger">{loginError}</div>

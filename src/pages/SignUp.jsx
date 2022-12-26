@@ -11,6 +11,7 @@ const SignUp = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [signUpError, setSignUpError] = useState("");
 
   const {
     register,
@@ -32,12 +33,19 @@ const SignUp = () => {
       .post("https://reqres.in/api/users", user)
       .then((response) => {
         console.log(response.data);
+      })
+      .catch((error) => {
+        setSignUpError("ارتباط با سرور برقرار نشد. لطفا مجددا تلاش کنید");
+        console.log(error);
       });
   };
 
   return (
-    <div className="container-fluid" style={{ height: "100vh" }}>
+    <div className="container-fluid" style={{ height: "150vh" }}>
       <div className="form-container bg-light mx-auto py-5 px-4">
+        {signUpError.length !== 0 && (
+          <div className="alert alert-danger">{signUpError}</div>
+        )}
         <form onSubmit={handleSubmit(submitForm)}>
           <span className="black font-yekan d-block">نام</span>
           <input
@@ -64,7 +72,9 @@ const SignUp = () => {
             className="w-100 my-2 p-1"
             name="email"
             type="email"
-            {...register("email", {onChange: (e) => setEmail(e.target.value)})}
+            {...register("email", {
+              onChange: (e) => setEmail(e.target.value),
+            })}
           />
           <p className="danger text-danger"> {errors.email?.message} </p>
           <span className="black font-yekan d-block">رمز ورود</span>
@@ -72,7 +82,9 @@ const SignUp = () => {
             className="w-100 my-2 p-1"
             name="password"
             type="password"
-            {...register("password", {onChange: (e) => setPassword(e.target.value)})}
+            {...register("password", {
+              onChange: (e) => setPassword(e.target.value),
+            })}
           />
           <p className="danger text-danger"> {errors.password?.message} </p>
           <span className="black font-yekan d-block">تکرار رمز ورود</span>
