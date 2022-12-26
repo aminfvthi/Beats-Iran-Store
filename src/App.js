@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Sidebar, Navbar, Footer } from "./components";
 import {
-  Account,
   Home,
+  Profile,
   Login,
   SignUp,
   Products,
@@ -24,7 +24,7 @@ const App = () => {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="account" element={<Account />} />
+            <Route path="profile" element={<Profile />} />
             <Route path="login" element={<Login />} />
             <Route path="sign-up" element={<SignUp />} />
             <Route path="products" element={<Products />}>

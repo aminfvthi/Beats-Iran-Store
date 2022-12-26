@@ -39,7 +39,7 @@ const Navbar = () => {
               <i className="fa fa-shopping-cart"></i>
             </Link>
             <Link
-              to={`${isLoggedIn ? "/account" : "/login"}`}
+              to={`${isLoggedIn ? "/profile" : "/login"}`}
               className="navbar-btn black hover-gray "
             >
               <i className="fa fa-user-circle"></i>
