@@ -30,7 +30,9 @@ const Login = () => {
     axios
       .post("https://reqres.in/api/login", user)
       .then((response) => {
+        localStorage.setItem("token", response.data.token);
         setIsFetching(false);
+        window.location = "/profile"
         console.log(response);
       })
       .catch((error) => {
