@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
-import { useStateContext } from "../contexts/ContextProvider";
+import { useGlobalContext } from "../contexts/GlobalContext";
 import "./styles/Sidebar.css";
 
 const Sidebar = () => {
-  const { activeSidebar, handleSidebar, isLoggedIn } = useStateContext();
+  const { activeSidebar, handleSidebar, isLoggedIn } = useGlobalContext();
   console.log("Sidebar");
 
   return (
@@ -12,10 +12,7 @@ const Sidebar = () => {
       {activeSidebar && (
         <div className="sidebar d-flex flex-column p-5 bg-light font-yekan">
           <div className="d-flex justify-content-between align-items-center">
-            <NavLink
-              to="/"
-              className="d-flex align-items-center sidebar-brand"
-            >
+            <NavLink to="/" className="d-flex align-items-center sidebar-brand">
               <span className="black mx-2">فروشگاه بیتس ایران</span>
             </NavLink>
             <Link onClick={handleSidebar}>

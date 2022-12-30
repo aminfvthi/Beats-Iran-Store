@@ -1,8 +1,8 @@
 import React, { createContext, useContext, useState } from "react";
 
-const StateContext = createContext();
+const GlobalContext = createContext();
 
-export const StateContextProvider = ({ children }) => {
+export const GlobalContextProvider = ({ children }) => {
   const [activeSidebar, setActiveSidebar] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -18,8 +18,8 @@ export const StateContextProvider = ({ children }) => {
   };
 
   return (
-    <StateContext.Provider value={value}>{children}</StateContext.Provider>
+    <GlobalContext.Provider value={value}>{children}</GlobalContext.Provider>
   );
 };
 
-export const useStateContext = () => useContext(StateContext);
+export const useGlobalContext = () => useContext(GlobalContext);

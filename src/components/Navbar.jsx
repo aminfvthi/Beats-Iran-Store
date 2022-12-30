@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useStateContext } from "../contexts/ContextProvider";
+import { useGlobalContext } from "../contexts/GlobalContext";
 import logo from "../assets/images/logo.png";
 import "./styles/Navbar.css";
 
 const Navbar = () => {
-  const { handleSidebar, isLoggedIn } = useStateContext();
+  const { handleSidebar, isLoggedIn } = useGlobalContext();
   console.log("Navbar");
 
   return (
