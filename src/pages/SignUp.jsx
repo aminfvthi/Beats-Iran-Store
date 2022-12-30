@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { signUpValidationSchema } from "../data/signUpValidationSchema";
@@ -13,6 +13,7 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [signUpError, setSignUpError] = useState("");
   const [isFetching, setIsFetching] = useState(false);
+  const navigate = useNavigate();
 
   const {
     register,
@@ -35,6 +36,7 @@ const SignUp = () => {
       .post("https://reqres.in/api/users", user)
       .then((response) => {
         setIsFetching(false);
+        navigate("/login");
         console.log(response.data);
       })
       .catch((error) => {
