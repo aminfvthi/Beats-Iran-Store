@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginValidationSchema } from "../data/loginValidationSchema";
+import { useGlobalContext } from "../contexts/GlobalContext";
 import "./styles/Form.css";
 
 const Login = () => {
@@ -11,6 +12,8 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState("");
   const [isFetching, setIsFetching] = useState(false);
+  const {setIsLoggedIn} = useGlobalContext();
+  const navigate = useNavigate();
 
   const {
     register,
@@ -31,8 +34,9 @@ const Login = () => {
       .post("https://reqres.in/api/login", user)
       .then((response) => {
         localStorage.setItem("token", response.data.token);
+        setIsLoggedIn(true);
         setIsFetching(false);
-        window.location = "/profile"
+        navigate("/profile")
         console.log(response);
       })
       .catch((error) => {
