@@ -6,7 +6,6 @@ import "./styles/Navbar.css";
 
 const Navbar = () => {
   const { handleSidebar, isLoggedIn } = useGlobalContext();
-  console.log("Navbar");
 
   return (
     <nav className="sticky">

@@ -37,12 +37,10 @@ const Login = () => {
         setIsLoggedIn(true);
         setIsFetching(false);
         navigate("/profile")
-        console.log(response);
       })
       .catch((error) => {
         setLoginError("ایمیل یا رمز وارد شده نادرست می باشد");
         setIsFetching(false);
-        console.log(error);
       });
   };
 

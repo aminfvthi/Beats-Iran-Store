@@ -37,12 +37,10 @@ const SignUp = () => {
       .then((response) => {
         setIsFetching(false);
         navigate("/login");
-        console.log(response.data);
       })
       .catch((error) => {
         setSignUpError("ارتباط با سرور برقرار نشد. لطفا مجددا تلاش کنید");
         setIsFetching(false);
-        console.log(error);
       });
   };
 

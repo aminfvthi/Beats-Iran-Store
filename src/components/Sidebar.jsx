@@ -5,7 +5,6 @@ import "./styles/Sidebar.css";
 
 const Sidebar = () => {
   const { activeSidebar, handleSidebar, isLoggedIn } = useGlobalContext();
-  console.log("Sidebar");
 
   return (
     <>
