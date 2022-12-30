@@ -1,17 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Sidebar, Navbar, Footer, ProtectedRoutes } from "./components";
-import {
-  Home,
-  Profile,
-  Login,
-  SignUp,
-  Products,
-  Headphones,
-  Earphones,
-  Speakers,
-  Accessories,
-} from "./pages";
+import {Home, Profile, Login, SignUp, Products, Headphones, Earphones, 
+        Speakers, Accessories,} from "./pages";
 
 const App = () => {
   return (
