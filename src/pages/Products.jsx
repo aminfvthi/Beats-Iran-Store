@@ -4,7 +4,6 @@ import "./styles/Products.css";
 
 const Products = () => {
   const navigate = useNavigate();
-  console.log("Products");
 
   return (
     <>

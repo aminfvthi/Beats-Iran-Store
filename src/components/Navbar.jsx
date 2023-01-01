@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useGlobalContext } from "../contexts/GlobalContext";
+import { useAppContext } from "../contexts/AppContext";
 import logo from "../assets/images/logo.png";
 import "./styles/Navbar.css";
 
 const Navbar = () => {
-  const { handleSidebar, isLoggedIn } = useGlobalContext();
+  const { handleSidebar, isLoggedIn } = useAppContext();
 
   return (
     <nav className="sticky">

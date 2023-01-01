@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
-import { useGlobalContext } from "../contexts/GlobalContext";
+import { useAppContext } from "../contexts/AppContext";
 import "./styles/Sidebar.css";
 
 const Sidebar = () => {
-  const { activeSidebar, handleSidebar, isLoggedIn } = useGlobalContext();
+  const { activeSidebar, handleSidebar, isLoggedIn } = useAppContext();
 
   return (
     <>

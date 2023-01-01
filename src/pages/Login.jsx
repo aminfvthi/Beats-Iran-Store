@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginValidationSchema } from "../data/loginValidationSchema";
-import { useGlobalContext } from "../contexts/GlobalContext";
+import { useAppContext } from "../contexts/AppContext";
 import "./styles/Form.css";
 
 const Login = () => {
@@ -12,7 +12,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState("");
   const [isFetching, setIsFetching] = useState(false);
-  const {setIsLoggedIn} = useGlobalContext();
+  const { setIsLoggedIn } = useAppContext();
   const navigate = useNavigate();
 
   const {
@@ -36,7 +36,7 @@ const Login = () => {
         localStorage.setItem("token", response.data.token);
         setIsLoggedIn(true);
         setIsFetching(false);
-        navigate("/profile")
+        navigate("/profile");
       })
       .catch((error) => {
         setLoginError("ایمیل یا رمز وارد شده نادرست می باشد");

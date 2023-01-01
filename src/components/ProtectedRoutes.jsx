@@ -1,9 +1,9 @@
 import React from "react";
 import { Outlet, Navigate } from "react-router-dom";
-import { useGlobalContext } from "../contexts/GlobalContext";
+import { useAppContext } from "../contexts/AppContext";
 
 const ProtectedRoutes = () => {
-  const { isLoggedIn } = useGlobalContext();
+  const { isLoggedIn } = useAppContext();
 
   return isLoggedIn ? <Outlet /> : <Navigate to="/login" />;
 };
