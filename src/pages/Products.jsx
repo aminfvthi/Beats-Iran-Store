@@ -11,14 +11,26 @@ const Products = () => {
         <div className="row mt-5 pb-3 border-bottom font-yekan gray">
           <div className="d-flex justify-content-start align-items-center">
             <h6 className="mt-1">محصولات / </h6>
-            <select className="select gray">
-              <option className="d-none" disabled selected>
+            <select defaultValue={"categories"} className="select gray">
+              <option value={"categories"} className="d-none" disabled>
                 دسته بندی ها
               </option>
-              <option onClick={() => navigate("headphones")}>هدفون ها</option>
-              <option onClick={() => navigate("earphones")}>ایرفون ها</option>
-              <option onClick={() => navigate("speakers")}>اسپیکر ها</option>
-              <option onClick={() => navigate("accessories")}>
+              <option
+                value={"headphones"}
+                onClick={() => navigate("headphones")}
+              >
+                هدفون ها
+              </option>
+              <option value={"earphones"} onClick={() => navigate("earphones")}>
+                ایرفون ها
+              </option>
+              <option value={"speakers"} onClick={() => navigate("speakers")}>
+                اسپیکر ها
+              </option>
+              <option
+                value={"accessories"}
+                onClick={() => navigate("accessories")}
+              >
                 لوازم جانبی
               </option>
             </select>
