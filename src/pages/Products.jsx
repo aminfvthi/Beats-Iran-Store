@@ -21,10 +21,16 @@ const Products = () => {
               >
                 هدفون ها
               </option>
-              <option value={"earphones"} onClick={() => navigate("earphones")}>
+              <option 
+                value={"earphones"}
+                onClick={() => navigate("earphones")}
+              >
                 ایرفون ها
               </option>
-              <option value={"speakers"} onClick={() => navigate("speakers")}>
+              <option
+                value={"speakers"}
+                onClick={() => navigate("speakers")}
+              >
                 اسپیکر ها
               </option>
               <option
