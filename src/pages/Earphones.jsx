@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import { useOutletContext } from "react-router-dom";
 import { ProductCard } from "../components";
 import { earphones } from "../data/dummy";
 
 const Earphones = () => {
+  const [setCategorie] = useOutletContext();
+
+  useEffect(() => {
+    setCategorie("earphones");
+  });
+
   return (
     <div className="container">
       <div className="row px-2 px-sm-0 mt-3 mt-md-5">

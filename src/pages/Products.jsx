@@ -1,9 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import "./styles/Products.css";
 
 const Products = () => {
+  const [categorie, setCategorie] = useState("categories")
   const navigate = useNavigate();
+
+  const handleClick = (route) => {
+    setCategorie(route);
+    navigate(route);
+  }
 
   return (
     <>
@@ -11,31 +17,30 @@ const Products = () => {
         <div className="row mt-5 pb-3 border-bottom font-yekan gray">
           <div className="d-flex justify-content-start align-items-center">
             <h6 className="mt-1">محصولات / </h6>
-            <select defaultValue={"categories"} className="select gray">
-              <option value={"categories"} className="d-none" disabled>
-                دسته بندی ها
-              </option>
+            <select value={categorie} className="select gray">
+              <option hidden disabled value="categories">دسته بندی ها</option>
               <option
+                className="font-yekan"
                 value={"headphones"}
-                onClick={() => navigate("headphones")}
+                onClick={() => handleClick("headphones")}
               >
                 هدفون ها
               </option>
               <option 
                 value={"earphones"}
-                onClick={() => navigate("earphones")}
+                onClick={() => handleClick("earphones")}
               >
                 ایرفون ها
               </option>
               <option
                 value={"speakers"}
-                onClick={() => navigate("speakers")}
+                onClick={() => handleClick("speakers")}
               >
                 اسپیکر ها
               </option>
               <option
                 value={"accessories"}
-                onClick={() => navigate("accessories")}
+                onClick={() => handleClick("accessories")}
               >
                 لوازم جانبی
               </option>
@@ -43,7 +48,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-      <Outlet />
+      <Outlet context={[setCategorie]} />
     </>
   );
 };
