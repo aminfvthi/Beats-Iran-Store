@@ -1,15 +1,19 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import "./styles/Products.css";
 
 const Products = () => {
-  const [categorie, setCategorie] = useState("categories")
+  const [categorie, setCategorie] = useState("categories");
   const navigate = useNavigate();
 
   const handleClick = (route) => {
     setCategorie(route);
     navigate(route);
-  }
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   return (
     <>
@@ -18,7 +22,9 @@ const Products = () => {
           <div className="d-flex justify-content-start align-items-center">
             <h6 className="mt-1">محصولات / </h6>
             <select value={categorie} className="select gray">
-              <option hidden disabled value="categories">دسته بندی ها</option>
+              <option hidden disabled value="categories">
+                دسته بندی ها
+              </option>
               <option
                 className="font-yekan"
                 value={"headphones"}
@@ -26,7 +32,7 @@ const Products = () => {
               >
                 هدفون ها
               </option>
-              <option 
+              <option
                 value={"earphones"}
                 onClick={() => handleClick("earphones")}
               >
