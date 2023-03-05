@@ -15,7 +15,7 @@ const Navbar = () => {
             <div onClick={handleSidebar} className="navbar-btn">
               <i className="fa fa-navicon black hover-gray"></i>
             </div>
-            <Link to="/" className="align-items-center brand mx-3">
+            <Link to="beats-iran-store" className="align-items-center brand mx-3">
               <span className="font-yekan black">فروشگاه بیتس ایران</span>
               <img className="navbar-logo mx-2" src={logo} alt="" />
             </Link>
@@ -32,7 +32,7 @@ const Navbar = () => {
               </div>
             </form>
             <Link
-              to="/cart"
+              to=""
               className="d-none d-lg-block navbar-btn black hover-gray mx-3"
             >
               <i className="fa fa-shopping-cart"></i>
@@ -73,25 +73,25 @@ const Navbar = () => {
             <div>لوازم جانبی</div>
           </Link>
           <Link
-            to="/warranty"
+            to=""
             className="products-nav-item gray hover-black d-flex justify-content-center align-items-center"
           >
             <div>گارانتی</div>
           </Link>
           <Link
-            to="/repair"
+            to=""
             className="products-nav-item gray hover-black d-flex justify-content-center align-items-center"
           >
             <div>تعمیرات</div>
           </Link>
           <Link
-            to="/how-to-buy"
+            to=""
             className="products-nav-item gray hover-black d-flex justify-content-center align-items-center"
           >
             <div>نحوه خرید</div>
           </Link>
           <Link
-            to="/contact-us"
+            to=""
             className="products-nav-item gray hover-black d-flex justify-content-center align-items-center"
           >
             <div>تماس با ما</div>

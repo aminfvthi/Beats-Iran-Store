@@ -21,7 +21,7 @@ const Sidebar = () => {
           <hr />
           <div className="d-flex flex-column py-2">
             <NavLink
-              to="/"
+              to="beats-iran-store"
               className="py-2 px-3 sidebar-item"
               onClick={handleSidebar}
             >
@@ -79,7 +79,7 @@ const Sidebar = () => {
               <span className="black mx-2"> لوازم جانبی</span>
             </Link>
             <Link
-              to="/warranty"
+              to=""
               className="my-1 py-2 px-3 sidebar-item"
               onClick={handleSidebar}
             >
@@ -87,7 +87,7 @@ const Sidebar = () => {
               <span className="black mx-2">گارانتی</span>
             </Link>
             <Link
-              to="/repair"
+              to=""
               className="my-1 py-2 px-3 sidebar-item"
               onClick={handleSidebar}
             >
@@ -95,7 +95,7 @@ const Sidebar = () => {
               <span className="black mx-2">تعمیرات</span>
             </Link>
             <Link
-              to="/how-to-buy"
+              to=""
               className="my-1 py-2 px-3 sidebar-item"
               onClick={handleSidebar}
             >
@@ -103,7 +103,7 @@ const Sidebar = () => {
               <span className="black mx-2">نحوه خرید</span>
             </Link>
             <Link
-              to="/contact-us"
+              to=""
               className="my-1 py-2 px-3 sidebar-item"
               onClick={handleSidebar}
             >
@@ -141,7 +141,7 @@ const Sidebar = () => {
               <span className="black mx-2">حساب کاربری</span>
             </NavLink>
             <NavLink
-              to="/cart"
+              to=""
               className="py-2 px-3 sidebar-item"
               onClick={handleSidebar}
             >
@@ -183,7 +183,7 @@ const Sidebar = () => {
               <span className="black mx-2"> لوازم جانبی</span>
             </Link>
             <Link
-              to="/warranty"
+              to=""
               className="my-1 py-2 px-3 sidebar-item"
               onClick={handleSidebar}
             >
@@ -191,7 +191,7 @@ const Sidebar = () => {
               <span className="black mx-2">گارانتی</span>
             </Link>
             <Link
-              to="/repair"
+              to=""
               className="my-1 py-2 px-3 sidebar-item"
               onClick={handleSidebar}
             >
@@ -199,7 +199,7 @@ const Sidebar = () => {
               <span className="black mx-2">تعمیرات</span>
             </Link>
             <Link
-              to="/how-to-buy"
+              to=""
               className="my-1 py-2 px-3 sidebar-item"
               onClick={handleSidebar}
             >
@@ -207,7 +207,7 @@ const Sidebar = () => {
               <span className="black mx-2">نحوه خرید</span>
             </Link>
             <Link
-              to="/contact-us"
+              to=""
               className="my-1 py-2 px-3 sidebar-item"
               onClick={handleSidebar}
             >

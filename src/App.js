@@ -12,7 +12,8 @@ const App = () => {
         <Navbar />
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
+            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="beats-iran-store" element={<Home />} />
             <Route element={<ProtectedRoutes />}>
               <Route path="profile" element={<Profile />} />
             </Route>

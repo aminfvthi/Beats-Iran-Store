@@ -17,7 +17,7 @@ const Categories = () => {
       </div>
       <div className="row p-3">
         <div className="col-6 col-lg-3 mb-4">
-          <Link to="products/headphones">
+          <Link to="/products/headphones">
             <div className="categories-card">
               <div className="row p-2">
                 <div className="col-6 d-flex justify-content-start align-items-center px-4">
@@ -35,7 +35,7 @@ const Categories = () => {
           </Link>
         </div>
         <div className="col-6 col-lg-3 mb-4">
-          <Link to="products/earphones">
+          <Link to="/products/earphones">
             <div className="categories-card">
               <div className="row p-2">
                 <div className="col-6 d-flex justify-content-start align-items-center px-4">
@@ -53,7 +53,7 @@ const Categories = () => {
           </Link>
         </div>
         <div className="col-6 col-lg-3 mb-4">
-          <Link to="products/speakers">
+          <Link to="/products/speakers">
             <div className="categories-card">
               <div className="row p-2">
                 <div className="col-6 d-flex justify-content-start align-items-center px-4">
@@ -71,7 +71,7 @@ const Categories = () => {
           </Link>
         </div>
         <div className="col-6 col-lg-3 mb-4">
-          <Link to="products/accessories">
+          <Link to="/products/accessories">
             <div className="categories-card">
               <div className="row p-2">
                 <div className="col-6 d-flex justify-content-start align-items-center px-4">
