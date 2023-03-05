@@ -11,7 +11,7 @@ const Sidebar = () => {
       {activeSidebar ? (
         <div className="sidebar active d-flex flex-column p-5 bg-light font-yekan">
           <div className="d-flex justify-content-between align-items-center">
-            <NavLink to="/" className="d-flex align-items-center sidebar-brand">
+            <NavLink to="beats-iran-store" className="d-flex align-items-center sidebar-brand">
               <span className="black mx-2">فروشگاه بیتس ایران</span>
             </NavLink>
             <Link onClick={handleSidebar}>
@@ -37,7 +37,7 @@ const Sidebar = () => {
               <span className="black mx-2">حساب کاربری</span>
             </NavLink>
             <NavLink
-              to="/cart"
+              to=""
               className="py-2 px-3 sidebar-item"
               onClick={handleSidebar}
             >
